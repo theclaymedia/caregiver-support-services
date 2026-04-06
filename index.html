@@ -72,14 +72,17 @@ ul { list-style: none; }
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 12px 0;
+  padding: 10px 0;
   transition: all 0.4s ease;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(20px);
   box-shadow: 0 1px 30px rgba(0,0,0,0.06);
 }
 .nav.scrolled {
-  padding: 8px 0;
+  padding: 6px 0;
+}
+.nav.scrolled .nav-logo img {
+  height: 60px;
 }
 .nav-inner {
   display: flex;
@@ -95,7 +98,7 @@ ul { list-style: none; }
   gap: 10px;
 }
 .nav-logo img {
-  height: 70px;
+  height: 90px;
   width: auto;
 }
 .nav-logo-text {
@@ -1119,6 +1122,444 @@ ul { list-style: none; }
   transform: translateY(0);
 }
 
+/* ========== HOW IT WORKS ========== */
+.how-it-works {
+  padding: 100px 0;
+  background: var(--white);
+}
+.how-it-works-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 56px;
+}
+.how-it-works-header p { color: var(--text-light); margin-top: 12px; }
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  position: relative;
+}
+.steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 48px;
+  left: 14%;
+  right: 14%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--deco-teal), var(--primary), var(--accent), var(--deco-plum));
+  border-radius: 2px;
+  z-index: 0;
+}
+.step-card {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.step-number {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: var(--white);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+.step-card:nth-child(1) .step-number { background: var(--deco-teal); }
+.step-card:nth-child(2) .step-number { background: var(--primary); }
+.step-card:nth-child(3) .step-number { background: var(--accent); }
+.step-card:nth-child(4) .step-number { background: var(--deco-plum); }
+.step-card h4 {
+  font-size: 1.05rem;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.step-card p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+/* ========== LEADERSHIP ========== */
+.leadership {
+  padding: 100px 0;
+  background: var(--cream);
+}
+.leadership-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 56px;
+}
+.leadership-header p { color: var(--text-light); margin-top: 12px; }
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.leader-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 32px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all 0.4s;
+}
+.leader-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.06); }
+.leader-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-pale), var(--accent-pale));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  color: var(--primary-deep);
+  border: 3px solid var(--deco-teal);
+}
+.leader-card h3 { font-size: 1.25rem; color: var(--charcoal); margin-bottom: 4px; }
+.leader-card .leader-title {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.leader-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ========== ACCREDITATIONS ========== */
+.accreditations {
+  padding: 80px 0;
+  background: linear-gradient(160deg, #e8f3f5 0%, var(--white) 50%, #f0e6ee 100%);
+}
+.accreditations-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+.accreditations-header p { color: var(--text-light); margin-top: 12px; }
+.accreditations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.accred-card {
+  text-align: center;
+  padding: 32px 20px;
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+}
+.accred-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.accred-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: var(--primary);
+  font-size: 1.4rem;
+}
+.accred-card h4 {
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+}
+.accred-card p {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ========== IMPACT NUMBERS ========== */
+.impact-numbers {
+  padding: 80px 0;
+  background: var(--deco-teal);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.impact-numbers::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.06), transparent 70%);
+  border-radius: 50%;
+}
+.impact-numbers-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.impact-numbers-header .section-label { color: rgba(255,255,255,0.7); }
+.impact-numbers-header .section-heading { color: var(--white); }
+.impact-nums-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+.impact-num-item {
+  text-align: center;
+  padding: 24px 12px;
+}
+.impact-num-item .big-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.8rem;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.impact-num-item .num-label {
+  font-size: 0.82rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* ========== BLOG PREVIEW ========== */
+.blog-preview {
+  padding: 100px 0;
+  background: var(--cream);
+}
+.blog-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+.blog-header p { color: var(--text-light); margin-top: 12px; }
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.blog-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: all 0.4s;
+}
+.blog-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+.blog-card-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--white);
+}
+.blog-card:nth-child(1) .blog-card-image { background: linear-gradient(135deg, var(--deco-teal), var(--primary)); }
+.blog-card:nth-child(2) .blog-card-image { background: linear-gradient(135deg, var(--accent), var(--deco-plum)); }
+.blog-card:nth-child(3) .blog-card-image { background: linear-gradient(135deg, var(--primary), var(--deco-teal)); }
+.blog-card-body {
+  padding: 24px;
+}
+.blog-card-body .blog-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  background: var(--primary-pale);
+  padding: 4px 10px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+.blog-card-body h3 {
+  font-size: 1.1rem;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.blog-card-body p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.blog-card-body .read-more {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.3s;
+}
+.blog-card:hover .read-more { gap: 10px; }
+
+/* ========== FAQ ========== */
+.faq {
+  padding: 100px 0;
+  background: var(--white);
+}
+.faq-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+.faq-header p { color: var(--text-light); margin-top: 12px; }
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.faq-item:hover { border-color: var(--primary); }
+.faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  text-align: left;
+}
+.faq-question .faq-toggle {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 0.75rem;
+  transition: all 0.3s;
+}
+.faq-item.open .faq-question .faq-toggle {
+  background: var(--primary);
+  color: var(--white);
+  transform: rotate(45deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+.faq-item.open .faq-answer {
+  max-height: 300px;
+}
+.faq-answer-inner {
+  padding: 0 24px 20px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* ========== NEWSLETTER ========== */
+.newsletter {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--deco-teal) 0%, #5a8e99 100%);
+  color: var(--white);
+  text-align: center;
+}
+.newsletter h2 {
+  color: var(--white);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 12px;
+}
+.newsletter p {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 28px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.12);
+  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  outline: none;
+  backdrop-filter: blur(8px);
+  transition: border-color 0.3s;
+}
+.newsletter-form input::placeholder { color: rgba(255,255,255,0.5); }
+.newsletter-form input:focus { border-color: rgba(255,255,255,0.7); }
+.newsletter-form button {
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: none;
+  background: var(--white);
+  color: var(--primary-deep);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.newsletter-form button:hover { background: var(--cream); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+
+@media (max-width: 1024px) {
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid::before { display: none; }
+  .accreditations-grid { grid-template-columns: repeat(2, 1fr); }
+  .impact-nums-grid { grid-template-columns: repeat(3, 1fr); }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .steps-grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
+  .leadership-grid { grid-template-columns: 1fr; }
+  .accreditations-grid { grid-template-columns: 1fr 1fr; }
+  .impact-nums-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-grid { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .accreditations-grid { grid-template-columns: 1fr; }
+  .impact-nums-grid { grid-template-columns: 1fr; }
+}
+
 /* ========== VIDEO SECTIONS ========== */
 .video-section {
   padding: 80px 0;
@@ -1333,6 +1774,43 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- ========== HOW IT WORKS ========== -->
+<section class="how-it-works section-decorated">
+  <div class="deco-squares">
+    <div class="deco-sq" style="width:30px;height:30px;background:var(--deco-teal);top:10%;right:5%;animation-delay:1s;"></div>
+    <div class="deco-sq" style="width:20px;height:20px;background:var(--deco-plum);bottom:15%;left:4%;animation-delay:3.5s;"></div>
+  </div>
+  <div class="container">
+    <div class="how-it-works-header reveal">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-heading">Getting Started Is Simple</h2>
+      <p>From initial consultation to measurable results, our onboarding process is designed to get your team trained and confident as quickly as possible.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-number">1</div>
+        <h4>Schedule a Consultation</h4>
+        <p>Book a free demo to discuss your organization's training needs, workforce challenges, and goals.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-number">2</div>
+        <h4>Customize Your Program</h4>
+        <p>We tailor training bundles to your care setting -- home care, assisted living, HCBS, or hospital teams.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-number">3</div>
+        <h4>Train Your Team</h4>
+        <p>Caregivers complete modules via our LMS -- online, onsite, or hybrid. Progress is tracked in real time.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-number">4</div>
+        <h4>Measure Results</h4>
+        <p>Track retention improvements, completion rates, and certification status on your unified dashboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== UNDERSTANDING TURNOVER ========== -->
 <section class="turnover section-decorated" id="turnover">
   <div class="deco-squares">
@@ -1477,6 +1955,43 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- ========== ACCREDITATIONS ========== -->
+<section class="accreditations section-decorated">
+  <div class="deco-squares">
+    <div class="deco-sq" style="width:24px;height:24px;background:var(--deco-teal);top:12%;left:5%;animation-delay:0.5s;"></div>
+    <div class="deco-sq" style="width:18px;height:18px;background:var(--deco-plum);bottom:10%;right:4%;animation-delay:2.5s;"></div>
+  </div>
+  <div class="container">
+    <div class="accreditations-header reveal">
+      <span class="section-label">Accreditations &amp; Compliance</span>
+      <h2 class="section-heading">Recognized. Trusted. Compliant.</h2>
+      <p>Our training programs meet the highest standards of professional development and regulatory compliance.</p>
+    </div>
+    <div class="accreditations-grid">
+      <div class="accred-card reveal">
+        <div class="accred-icon"><i class="fas fa-certificate"></i></div>
+        <h4>CPD UK Accredited</h4>
+        <p>Accredited by the CPD Certification Service, a globally recognized quality standard.</p>
+      </div>
+      <div class="accred-card reveal">
+        <div class="accred-icon"><i class="fas fa-clipboard-check"></i></div>
+        <h4>&sect; 483.152 Compliant</h4>
+        <p>Courses designed to fulfill federal requirements for nurse aide training programs.</p>
+      </div>
+      <div class="accred-card reveal">
+        <div class="accred-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4>HCBS Aligned</h4>
+        <p>Training aligned with Home and Community-Based Services waiver program standards.</p>
+      </div>
+      <div class="accred-card reveal">
+        <div class="accred-icon"><i class="fas fa-flag-usa"></i></div>
+        <h4>50-State Coverage</h4>
+        <p>Programs designed to support regulatory requirements across all 50 U.S. states.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== WHO WE SERVE ========== -->
 <section class="serve section-decorated" id="serve">
   <div class="deco-squares">
@@ -1524,6 +2039,42 @@ ul { list-style: none; }
     </div>
     <div style="text-align:center;margin-top:40px;" class="reveal">
       <a href="#contact" class="btn-primary">Schedule a Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== IMPACT NUMBERS ========== -->
+<section class="impact-numbers section-decorated">
+  <div class="deco-squares">
+    <div class="deco-sq" style="width:30px;height:30px;background:rgba(255,255,255,0.2);top:15%;left:4%;animation-delay:1s;opacity:0.1;"></div>
+    <div class="deco-sq" style="width:22px;height:22px;background:var(--deco-plum);bottom:12%;right:6%;animation-delay:3s;opacity:0.08;"></div>
+  </div>
+  <div class="container">
+    <div class="impact-numbers-header reveal">
+      <span class="section-label">By the Numbers</span>
+      <h2 class="section-heading">Our Impact at a Glance</h2>
+    </div>
+    <div class="impact-nums-grid">
+      <div class="impact-num-item reveal">
+        <div class="big-num">60K+</div>
+        <div class="num-label">Caregivers Trained Globally</div>
+      </div>
+      <div class="impact-num-item reveal">
+        <div class="big-num">35%</div>
+        <div class="num-label">Turnover Rate With Training</div>
+      </div>
+      <div class="impact-num-item reveal">
+        <div class="big-num">50</div>
+        <div class="num-label">U.S. States Served</div>
+      </div>
+      <div class="impact-num-item reveal">
+        <div class="big-num">25+</div>
+        <div class="num-label">Years of Experience</div>
+      </div>
+      <div class="impact-num-item reveal">
+        <div class="big-num">$2,600</div>
+        <div class="num-label">Average Savings Per Retained Caregiver</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1720,6 +2271,35 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- ========== LEADERSHIP ========== -->
+<section class="leadership section-decorated">
+  <div class="deco-squares">
+    <div class="deco-sq" style="width:28px;height:28px;background:var(--deco-teal);top:8%;right:5%;animation-delay:1.5s;"></div>
+    <div class="deco-sq" style="width:22px;height:22px;background:var(--deco-plum);bottom:12%;left:6%;animation-delay:4s;"></div>
+  </div>
+  <div class="container">
+    <div class="leadership-header reveal">
+      <span class="section-label">Our Leadership</span>
+      <h2 class="section-heading">Meet the Team Behind the Mission</h2>
+      <p>Founded in 1997 as a 501(c)(3) nonprofit, Caregiver Support Services is led by passionate advocates for caregiver empowerment and workforce excellence.</p>
+    </div>
+    <div class="leadership-grid">
+      <div class="leader-card reveal">
+        <div class="leader-avatar">EG</div>
+        <h3>Dr. Eboni Green, PhD, RN</h3>
+        <div class="leader-title">President &amp; CEO</div>
+        <p>A registered nurse with decades of experience in long-term care, Dr. Green is the author of multiple caregiving books and a nationally recognized speaker on caregiver wellness, workforce development, and retention strategies.</p>
+      </div>
+      <div class="leader-card reveal">
+        <div class="leader-avatar">TG</div>
+        <h3>Terrence Green, MBA, CSA</h3>
+        <div class="leader-title">Co-Founder</div>
+        <p>A certified senior advisor with extensive experience in healthcare administration and business strategy, Terrence brings operational expertise to ensure our programs deliver measurable outcomes for organizations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== PARTNERS ========== -->
 <section class="partners">
   <div class="container">
@@ -1731,6 +2311,51 @@ ul { list-style: none; }
       <a href="#"><img src="assets/udemy.png" alt="Udemy"></a>
       <a href="#"><img src="assets/alison.png" alt="Alison"></a>
       <a href="#"><img src="assets/learntastic.png" alt="Learntastic"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BLOG PREVIEW ========== -->
+<section class="blog-preview section-decorated">
+  <div class="deco-squares">
+    <div class="deco-sq" style="width:26px;height:26px;background:var(--deco-teal);top:10%;left:4%;animation-delay:2s;"></div>
+    <div class="deco-sq" style="width:20px;height:20px;background:var(--deco-plum);bottom:14%;right:5%;animation-delay:0.5s;"></div>
+    <div class="deco-sq" style="width:18px;height:18px;background:var(--deco-silver);top:55%;right:3%;animation-delay:4s;"></div>
+  </div>
+  <div class="container">
+    <div class="blog-header reveal">
+      <span class="section-label">Latest Insights</span>
+      <h2 class="section-heading">From Our Blog</h2>
+      <p>Expert perspectives on caregiver training, workforce retention, wellness strategies, and industry trends.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-card-image"><i class="fas fa-brain"></i></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Burnout Prevention</span>
+          <h3>5 Evidence-Based Strategies to Prevent Caregiver Burnout</h3>
+          <p>Burnout is the leading cause of caregiver turnover. Learn how proactive wellness training can help your team stay resilient.</p>
+          <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-card-image"><i class="fas fa-chart-bar"></i></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Workforce Retention</span>
+          <h3>Why 4 Out of 5 Caregivers Leave Within 100 Days</h3>
+          <p>Understanding the root causes of early turnover and how structured onboarding training can dramatically improve retention.</p>
+          <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-card-image"><i class="fas fa-graduation-cap"></i></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Training Best Practices</span>
+          <h3>The ROI of Accredited Caregiver Training Programs</h3>
+          <p>How investing in CPD-accredited training programs saves money, improves care quality, and creates career pathways.</p>
+          <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1835,6 +2460,73 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- ========== FAQ ========== -->
+<section class="faq section-decorated" id="faq">
+  <div class="deco-squares">
+    <div class="deco-sq" style="width:30px;height:30px;background:var(--deco-teal);top:8%;right:4%;animation-delay:1s;"></div>
+    <div class="deco-sq" style="width:22px;height:22px;background:var(--deco-plum);bottom:10%;left:5%;animation-delay:3s;"></div>
+    <div class="deco-sq" style="width:16px;height:16px;background:var(--deco-silver);top:50%;left:3%;animation-delay:5s;"></div>
+  </div>
+  <div class="container">
+    <div class="faq-header reveal">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-heading">Frequently Asked Questions</h2>
+      <p>Get answers to the most common questions about our caregiver training programs, accreditation, and enrollment.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>What types of caregivers are your training programs designed for?</span>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Our programs are designed for Certified Nursing Assistants (CNAs), Home Health Aides (HHAs), Medication Aides, personal care aides, HCBS direct support professionals, and family caregivers. We offer role-specific modules as well as universal skills training applicable across all care settings.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>What does CPD accreditation mean for my organization?</span>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">CPD (Continuing Professional Development) accreditation from the CPD Certification Service (CPD UK) means our programs have been independently reviewed and endorsed for quality. Caregivers earn recognized certificates that demonstrate professional development, and organizations can document compliance with training requirements.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>How are the training programs delivered?</span>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">We offer flexible delivery options including online self-paced modules through our LMS platform, onsite instructor-led sessions, hybrid blended learning, and train-the-trainer programs. All options include progress tracking, assessments, and electronic certificates upon completion.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Can training be customized for our specific care setting?</span>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Absolutely. We work with each organization to tailor training bundles based on your care setting, state requirements, and workforce challenges. Whether you operate home care agencies, assisted living communities, HCBS waiver programs, or hospital teams, we customize content to match your needs.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Do you offer group discounts for organizations?</span>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes, we offer group pricing for organizations enrolling multiple caregivers. Volume discounts are available for teams of all sizes. Contact us or book a demo to discuss custom pricing tailored to your organization's needs and budget.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>How does training reduce caregiver turnover?</span>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Research shows that comprehensive training significantly reduces turnover by preparing caregivers from day one, building confidence, preventing burnout through wellness resources, and creating clear career pathways. Organizations using our programs report turnover rates as low as 35%, compared to the industry average of 81%-121%.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Are your courses compliant with federal and state regulations?</span>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. Our courses are designed to fulfill &sect; 483.152 requirements for approval of nurse aide training and competency evaluation programs. We also align with state-specific training mandates across all 50 states, supporting your organization's regulatory compliance needs.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== CONTACT CTA ========== -->
 <section class="cta-banner" id="contact" style="background: linear-gradient(135deg, var(--accent) 0%, var(--primary-deep) 100%);">
   <div class="container reveal">
@@ -1843,6 +2535,22 @@ ul { list-style: none; }
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
       <a href="mailto:info@caregiversupportservices.com" class="btn-primary"><i class="fas fa-envelope"></i> Get in Touch</a>
       <a href="#" class="btn-primary" style="background:transparent;border:2px solid white;"><i class="fas fa-calendar-alt"></i> Book a Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NEWSLETTER ========== -->
+<section class="newsletter section-decorated">
+  <div class="deco-squares">
+    <div class="deco-sq" style="width:24px;height:24px;background:rgba(255,255,255,0.2);top:15%;right:8%;animation-delay:1s;opacity:0.12;"></div>
+    <div class="deco-sq" style="width:18px;height:18px;background:var(--deco-plum);bottom:18%;left:5%;animation-delay:3s;opacity:0.1;"></div>
+  </div>
+  <div class="container reveal">
+    <h2>Stay Connected with Caregiver Training International</h2>
+    <p>Subscribe to our newsletter for training tips, industry insights, new course announcements, and workforce development strategies.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Enter your email address" aria-label="Email address">
+      <button type="button"><i class="fas fa-paper-plane" style="margin-right:6px;"></i> Subscribe</button>
     </div>
   </div>
 </section>
